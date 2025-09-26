@@ -1,0 +1,14 @@
+node_modules
+dist
+packages/**/node_modules
+packages/**/dist
+
+# Editor directories and files
+.vscode
+.idea
+
+yarn.lock
+package-lock.json
+
+docs/.vitepress/cache
+docs/.vitepress/temp
