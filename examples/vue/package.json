@@ -1,5 +1,5 @@
 {
-  "name": "use-gesture-x-vue3-demo",
+  "name": "use-guideline-vue3-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "vue": "^3.3.9",
     "vue-router": "^4.2.5",
+    "@use-guideline/vue3": "^1.0.0",
     "@use-gesture-x/vue3": "^1.0.0"
   },
   "devDependencies": {

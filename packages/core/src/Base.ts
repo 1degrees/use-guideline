@@ -1,4 +1,4 @@
-import { IConfig, IDragData, IOffset } from './Types'
+import type { IConfig, IDragData, IOffset } from './types'
 export class Base {
   _config: IConfig
   _el?: Element

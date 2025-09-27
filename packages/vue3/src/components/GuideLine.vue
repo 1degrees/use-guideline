@@ -4,17 +4,17 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useGuideLine } from '../composables/useGuideLine'
+import { useGuideline } from '../composables/useGuideLine'
 
-const line = useGuideLine().line
+const line = useGuideline().line
 const guideLineX = computed(() => {
   return {
-    top: line.value?.top ? line.value?.top + 'px' : '',
+    top: line.value?.x ? line.value?.x + 'px' : '',
   }
 })
 const guideLineY = computed(() => {
   return {
-    left: line.value?.left ? line.value?.left + 'px' : '',
+    left: line.value?.y ? line.value?.y + 'px' : '',
   }
 })
 </script>

@@ -1,4 +1,4 @@
-import { IConfig } from './Types'
+import type { IConfig } from './types'
 import { Base } from './Base'
 import Adsorb from './Adsorb'
 import GuideLine from './GuideLine'

@@ -1,6 +1,6 @@
 # vue3 手势插件 - (英文文档 待后续更新)
 
-@use-gesture-x/vue3 一个非常易用且功能强大的 vue3 手势库。
+@use-guideline/vue3 一个非常易用且功能强大的 vue3 手势库。
 
 设计灵感借鉴于 @use-gesture, 基于vue3 Component API 重新设计并实现的手势工具集合
 
@@ -8,19 +8,19 @@
 
 ## 使用方式
 
-### 安装 @use-gesture-x/vue3
+### 安装 @use-guideline/vue3
 
 ```bash
 
-npm install @use-gesture-x/vue3
+npm install @use-guideline/vue3
 
-yarn add @use-gesture-x/vue3
+yarn add @use-guideline/vue3
 
-pnpm install @use-gesture-x/vue3
+pnpm install @use-guideline/vue3
 
 ```
 
-### @use-gesture-x/vue3 component API 介绍
+### @use-guideline/vue3 component API 介绍
 
 useDrag 拖拽、useMove 移动、useHover 悬停、useWheel 滚轮、useScroll 滚动、
 
@@ -43,7 +43,7 @@ usePinch 缩放、旋转、useGesture 自定义手势。
 </template>
 
 <script setup>
-import { useMove } from '@use-gesture-x/vue3'
+import { useMove } from '@use-guideline/vue3'
 // 引入自定义模拟动画的componentAPI，后续会介绍该部分代码，提供参考
 import { useSpring } from './useSpring'
 const [style, api] = useSpring({})
@@ -74,7 +74,7 @@ const bind = useMove(({ active, xy: [x, y], args: [color, scale], ...others }) =
 </template>
 
 <script setup>
-import { useMove } from '@use-gesture-x/vue3'
+import { useMove } from '@use-guideline/vue3'
 // 引入手写简洁动画的useSpring，后续会介绍该部分代码，提供参考
 import { useSpring } from './useSpring'
 import { ref } from 'vue'

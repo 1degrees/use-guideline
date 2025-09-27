@@ -1,33 +1,26 @@
 <template>
-  <div class="flex fill center gesture-scroll">
-      <svg class="svg" viewBox="-14.5 -14.5 328 28" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <circle class="from" v-bind="bind()" fill="hotpink" cx="0" cy="0" r="12" />
-        <line x1="0" y1="0" :x2="state.x2" :y2="state.y2" stroke="hotpink" strokeLinecap="square" strokeWidth="2" />
-        <circle ref="targetRef" class="target" cx="300" cy="0" r="12" :fill="tColor" />
-      </svg>
-      <div class="status">{{text}} </div>
-    </div>
+  <div class="flex fill center container">
+    <GuideLine />
+    <div v-for="item in items" :key="item" :style="{backgroundColor: item}"></div>
+    <div class="target" v-bind="bind()"></div>
+  </div>
 </template>
 
 <script setup>
 import { watch, ref, computed } from 'vue'
+import { useGuideline, GuideLine } from '@use-guideline/vue3'
 import { useDrag } from '@use-gesture-x/vue3'
 const targetRef = ref(null)
 const attached = ref(false)
 const dragging = ref(false)
+const items = ['hotpink', 'blue', 'green', 'red', 'orange', 'yellow']
 const state = ref({ x2: 0, y2: 0 })
 const tColor = computed(() => attached.value ? 'hotpink' : 'blue')
 const text = computed(() => attached.value ? dragging.value ? '你可以松开指针' : '点被连接起来了!'
   : '连接粉色点和蓝色点')
 
 const bind = useDrag(({ xy: [x, y], active, last, movement: [mx, my] }) => {
-  dragging.value = active
-  attached.value = document.elementFromPoint(x, y) === targetRef.value
-  if (last) {
-    state.value = { x2: attached.value ? 300 : 0, y2: 0 }
-  } else {
-    state.value = { x2: mx, y2: my }
-  }
+  console.log(x, y, active, last, mx, my, '-------')
 })
 </script>
 <style scoped>

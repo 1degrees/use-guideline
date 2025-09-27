@@ -1,5 +1,5 @@
 import { Base } from './Base'
-import { IOffset } from './Types'
+import { IOffset } from './types'
 export default class Adsorb {
   base: Base
   constructor(base: Base) {

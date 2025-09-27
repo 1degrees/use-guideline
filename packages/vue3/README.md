@@ -18,7 +18,7 @@
 
 <p align="middle">
   <a href="https://use-gesture-vue3.netlify.app/">Demo文档地址</a>
-  <a href="https://1degrees.github.io/use-gesture-x/">Demo文档地址(备用)</a>
+  <a href="https://1degrees.github.io/use-guideline/">Demo文档地址(备用)</a>
 </p>
 
 ## 使用方式

@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/useDrag',
+    redirect: '/guideLine',
     children: [
       {
         name: 'guideLine',

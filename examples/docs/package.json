@@ -1,5 +1,5 @@
 {
-  "name": "use-gesture-x-vue3-docs",
+  "name": "use-guideline-vue3-docs",
   "private": "true",
   "type": "module",
   "version": "1.1.1",
@@ -18,7 +18,7 @@
     "@vitepress-demo-preview/core": "^0.2.0",
     "@vitepress-demo-preview/component": "^2.5.1",
     "@vitepress-demo-preview/plugin": "^1.4.0",
-    "@use-gesture-x/vue3": "^1.0.0",
+    "@use-guideline/vue3": "^1.0.0",
     "vue": "^3.5.17"
   }
 }

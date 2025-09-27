@@ -1,6 +1,6 @@
 # vue3 手势插件
 
-@use-gesture-x/vue3 一个非常易用且功能强大的 vue3 手势库。
+@use-guideline/vue3 一个非常易用且功能强大的 vue3 手势库。
 
 设计灵感借鉴于 @use-gesture, 基于vue3 Component API 重新设计并实现的手势工具集合
 
@@ -8,19 +8,19 @@
 
 ## 使用方式
 
-### 安装 @use-gesture-x/vue3
+### 安装 @use-guideline/vue3
 
 ```bash
 
-npm install @use-gesture-x/vue3
+npm install @use-guideline/vue3
 
-yarn add @use-gesture-x/vue3
+yarn add @use-guideline/vue3
 
-pnpm install @use-gesture-x/vue3
+pnpm install @use-guideline/vue3
 
 ```
 
-### @use-gesture-x/vue3 component API 介绍
+### @use-guideline/vue3 component API 介绍
 
 useDrag 拖拽、useMove 移动、useHover 悬停、useWheel 滚轮、useScroll 滚动、
 
@@ -34,7 +34,7 @@ usePinch 缩放、旋转、useGesture 自定义手势。
 
 <preview path="@demo/dotsConnect/src/app.vue" title="useDrag 拖拽连接两个点" description="" />
 
-@use-gesture-x/vue3提供了两种方式实现，具体可看下方实现
+@use-guideline/vue3提供了两种方式实现，具体可看下方实现
 
 ### 使用方式一：useDrag + v-bind方式
 
@@ -54,7 +54,7 @@ usePinch 缩放、旋转、useGesture 自定义手势。
 
 <script setup>
 import { watch, ref, computed } from 'vue'
-import { useDrag } from '@use-gesture-x/vue3'
+import { useDrag } from '@use-guideline/vue3'
 const targetRef = ref(null)
 const attached = ref(false)
 const dragging = ref(false)
@@ -91,7 +91,7 @@ const bind = useDrag(({ xy: [x, y], active, last, movement: [mx, my] }) => {
 
 <script setup>
 import { watch, ref, computed } from 'vue'
-import { useDrag } from '@use-gesture-x/vue3'
+import { useDrag } from '@use-guideline/vue3'
 const targetRef = ref(null)
 const dragRef = ref(null)
 const attached = ref(false)

@@ -3,7 +3,7 @@
 本工程是使用 vue3 脚手架构建的手势使用demo案例
 ### Available hooks
 
-@use-gesture-x/vue exports several hooks that can handle different gestures:
+@use-guideline/vue exports several hooks that can handle different gestures:
 
 | Hook         | Description                                |
 | ------------ | ------------------------------------------ |

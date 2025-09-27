@@ -3,16 +3,11 @@
   "version": "1.0.0",
   "description": "Core engine for receiving gestures",
   "keywords": [
-    "vue3",
     "@use-guideline/core",
-    "drag",
-    "move",
-    "hover",
-    "wheel",
-    "scroll",
-    "zoom",
-    "rotate",
-    "animation"
+    "vue",
+    "vue3",
+    "guideline",
+    "adsorb"
   ],
   "license": "MIT",
   "main": "dist/index.es.js",

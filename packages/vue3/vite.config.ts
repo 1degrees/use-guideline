@@ -10,15 +10,19 @@
  *
  */
 
-import { defineConfig } from 'vite'
 import path from 'path'
+import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {},
   envDir: './env',
   publicDir: false,
   plugins: [
+    vue(),
+    vueJsx(),
     dts({
       insertTypesEntry: true,
       tsconfigPath: path.resolve(__dirname, './tsconfig.json'),

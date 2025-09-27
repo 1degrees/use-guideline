@@ -30,9 +30,6 @@ export default defineConfig({
       name: '@use-guideline/core',
       entry: [
         path.resolve(__dirname, './src/index.ts'),
-        path.resolve(__dirname, './src/types.ts'), 
-        path.resolve(__dirname, './src/utils.ts'),
-        path.resolve(__dirname, './src/actions.ts')
       ],
       fileName: (format, entryName) => `${entryName}.${format}.js`,
       formats: ['es', 'cjs']
