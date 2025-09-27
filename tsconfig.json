@@ -61,9 +61,10 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "paths": {
-      "@use-gesture-x/core": ["packages/core/src/index"],
-      "@use-gesture-x/core/*": ["packages/core/src/*"],
-      "@use-gesture-x/vue3": ["packages/vue3/src/index"]
+      "@use-guideline/core": ["packages/core/src/index"],
+      "@use-guideline/core/*": ["packages/core/src/*"],
+      "@use-guideline/vue3": ["packages/vue3/src/index"],
+      "@use-guideline/react": ["packages/react/src/index"]
     }
   }
 }

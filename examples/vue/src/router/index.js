@@ -5,45 +5,15 @@ const routes = [
     redirect: '/useDrag',
     children: [
       {
-        name: 'useDrag',
-        path: '/useDrag',
-        component: () => import('@sandboxes/useDrag/src/app.vue')
+        name: 'guideLine',
+        path: '/guideLine',
+        component: () => import('@sandboxes/guideLine/src/app.vue')
       },
       {
-        name: 'useMove',
-        path: '/useMove',
-        component: () => import('@sandboxes/useMove/src/app.vue')
+        name: 'adsorb',
+        path: '/adsorb',
+        component: () => import('@sandboxes/adsorb/src/app.vue')
       },
-      {
-        name: 'usePinch',
-        path: '/usePinch',
-        component: () => import('@sandboxes/usePinch/src/app.vue')
-      },
-      {
-        name: 'useWheel',
-        path: '/useWheel',
-        component: () => import('@sandboxes/useWheel/src/app.vue')
-      },
-      {
-        name: 'useScroll',
-        path: '/useScroll',
-        component: () => import('@sandboxes/useScroll/src/app.vue')
-      },
-      {
-        name: 'useHover',
-        path: '/useHover',
-        component: () => import('@sandboxes/useHover/src/app.vue')
-      },
-      {
-        name: 'useGesture',
-        path: '/useGesture',
-        component: () => import('@sandboxes/useGesture/src/app.vue')
-      },
-      {
-        name: 'dotsConnect',
-        path: '/dotsConnect',
-        component: () => import('@sandboxes/dotsConnect/src/app.vue')
-      }
     ]
   }
 ]

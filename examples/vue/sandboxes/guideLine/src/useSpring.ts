@@ -2,12 +2,12 @@ import { reactive, computed } from 'vue'
 export function useSpring(_props) {
   const props = reactive({ x: 0, y: 0, z: 0, scale: 1, ..._props })
   const style = computed(() => {
-    const { x, y, z, scale, stop, ...others } = props
+    const { x, y, z, scale, immediate, ...others } = props
     return {
       transform: `translate3d(${props.x}px, ${props.y}px, ${props.z}px) scale(${props.scale})
         ${props.rotateZ ? 'rotateZ(' + props.rotateZ + 'deg)' : ''}`,
       ...others,
-      transition: stop ? 'none' : '0.2s linear'
+      transition: immediate ? 'none' : '0.2s linear'
     }
   })
   const set = (params) => {
@@ -17,7 +17,7 @@ export function useSpring(_props) {
     }
   }
   const start = (params) => {
-    params.stop = true
+    params.immediate = true
     for (const key in params) {
       if (params[key] !== undefined) props[key] = params[key]
     }
