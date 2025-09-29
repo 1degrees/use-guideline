@@ -3,18 +3,24 @@
   <div class="guide-line guide-line-y" :style="guideLineY"></div>
 </template>
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useGuideline } from '../composables/useGuideLine'
+import { computed, defineProps } from 'vue'
 
-const line = useGuideline().line
-const guideLineX = computed(() => {
-  return {
-    top: line.value?.x ? line.value?.x + 'px' : '',
+const props = defineProps({
+  line: {
+    type: Object,
+    default: () => ({})
   }
 })
+
+const guideLineX = computed(() => {
+  return {
+    left: props.line?.x ? props.line?.x + 'px' : '',
+  }
+})
+
 const guideLineY = computed(() => {
   return {
-    left: line.value?.y ? line.value?.y + 'px' : '',
+    top: props.line?.y ? props.line?.y + 'px' : '',
   }
 })
 </script>
@@ -28,18 +34,18 @@ const guideLineY = computed(() => {
 }
 
 .guide-line-x {
-  left: 0;
-  top: -10px;
-  height: 1px;
-  width: 100%;
-  border-top: 1px dashed red;
+  left: -10px;
+  top: 0px;
+  height: 100%;
+  width: 1px;    
+  border-left: 1px dashed red;
 }
 
 .guide-line-y {
-  top: 0;
-  left: -10px;
-  width: 1px;
-  height: 100%;
-  border-left: 1px dashed red;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed red;
 }
 </style>

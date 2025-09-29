@@ -1,6 +1,6 @@
 <template>
   <div class="flex fill center container">
-    <GuideLine />
+    <GuideLine :line="line" />
     <div class="drag-container">
       <div v-for="item in items" :key="item" class="card" :style="{backgroundColor: item}"></div>
       <div ref="targetRef" class="target" v-bind="bind()"> 拖拽辅助线 </div>
@@ -9,21 +9,20 @@
 </template>
 
 <script setup>
-import { watch, ref, computed } from 'vue'
+import { ref } from 'vue'
 import { useGuideline, GuideLine } from '@use-guideline/vue3'
 import { useDrag } from '@use-gesture-x/vue3'
-const items = ['hotpink', 'blue', 'green', 'red', 'orange', 'yellow']
+const items = ['hotpink', 'blue', 'green', 'red']
 const targetRef = ref(null)
-const { dragMove, dragEnd } = useGuideline()
+const { line, dragMove, dragEnd } = useGuideline()
 const bind = useDrag(({ xy: [x, y], active, last, movement: [mx, my] }) => {
-  console.log(x, y, active, last, mx, my, '-------')
+  targetRef.value.style.left = x + 'px'
+  targetRef.value.style.top = y + 'px'
   if (active) {
-    // dragMove({ x, y })
+    dragMove(targetRef.value)
   } else if (last) {
     dragEnd()
   }
-  targetRef.value.style.left = x + 'px'
-  targetRef.value.style.top = y + 'px'
 })
 </script>
 <style scoped>
@@ -67,32 +66,22 @@ body {
 }
 .card:nth-child(1) {
   top: 60px;
-  left: 60px;
+  left: 160px;
 }
 
 .card:nth-child(2) {
   top: 560px;
-  left: 60px;
+  left: 160px;
 }
 
 .card:nth-child(3) {
   top: 160px;
-  left: 30%;
+  left: 90%;
 }
 
 .card:nth-child(4) {
   top: 560px;
-  left: 50%;
-}
-
-.card:nth-child(5) {
-  top: 200px;
-  left: 90%;
-}
-
-.card:nth-child(6) {
-  top: 460px;
-  left: 90%;
+  left: 70%;
 }
 
 .drag-container {

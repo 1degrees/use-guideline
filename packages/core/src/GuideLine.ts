@@ -7,18 +7,19 @@ export default class GuideLine {
     this.base = base
   }
 
+  findLines = (selfs: number[], others: number[]) => {
+    return others.filter((other) => selfs.some((self) => Math.abs(self - other) <= this.base.config.diff))
+  }
+
   calcLine() {
     // 纵向辅助线
     const xLines = this.findLines(this.base.selfX, this.base.othersX)
     const yLines = this.findLines(this.base.selfY, this.base.othersY)
-    return {
+    const line = {
       x: xLines.length ? Math.min(...xLines) : undefined,
       y: yLines.length ? Math.min(...yLines) : undefined
     }
-  }
-
-  findLines = (selfs: number[], others: number[]) => {
-    return others.filter((other) => selfs.some((self) => Math.abs(self - other) <= this.base.config.diff))
+    this.base.lines = line
   }
 }
 

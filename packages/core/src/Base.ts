@@ -1,7 +1,8 @@
-import type { IConfig, IDragData, IOffset } from './types'
+import type { IConfig, IDragData, IOffset } from './type'
 export class Base {
-  _config: IConfig
   _el?: Element
+  _others: Element[] = []
+  _config: IConfig
   // 拖拽元素坐标集合
   // 左右
   _selfX: number[] = []
@@ -21,7 +22,6 @@ export class Base {
 
   // 吸附初始数据
   _adsorbs: IOffset = {}
-
 
   constructor(config?: IConfig) {
     this._config = Object.assign({ diff: 10, isAdsorb: false }, config)
@@ -85,14 +85,20 @@ export class Base {
     return this._adsorbs
   }
 
-  initBase(el: Element) {
-    this._el = el
-    this.setSelf(el)
-    this.setOthers(el)
-  }
-
   get el() {
     return this._el
+  }
+
+  get others() {
+    return this._others
+  }
+
+  initBase(el: Element, others: Element[]) {
+    this._el = el
+    this._others = others?.length ?
+      others : this.getAllSiblings(el)
+    this.setSelf(el)
+    this.setOthers(el)
   }
 
   // 自身坐标集合设置函数
@@ -116,7 +122,7 @@ export class Base {
   setOthers(el: Element) {
     const otherX = [] as number[]
     const otherY = [] as number[]
-    const els = this.getAllSiblings(el)
+    const els = this.others
     els.forEach((el) => {
         const { left, top, width, height } = el.getBoundingClientRect()
         otherX.push(left);
