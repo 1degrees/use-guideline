@@ -14,7 +14,7 @@ import { useGuideline, GuideLine } from '@use-guideline/vue3'
 import { useDrag } from '@use-gesture-x/vue3'
 const items = ['hotpink', 'blue', 'green', 'red']
 const targetRef = ref(null)
-const { line, dragMove, dragEnd } = useGuideline()
+const { line, dragMove, dragEnd } = useGuideline({ isAdsorb: true })
 const bind = useDrag(({ xy: [x, y], active, last, movement: [mx, my] }) => {
   targetRef.value.style.left = x + 'px'
   targetRef.value.style.top = y + 'px'

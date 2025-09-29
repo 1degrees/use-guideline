@@ -93,7 +93,7 @@ export class Base {
     return this._others
   }
 
-  initBase(el: Element, others: Element[]) {
+  initBase(el: Element, others?: Element[]) {
     this._el = el
     this._others = others?.length ?
       others : this.getAllSiblings(el)

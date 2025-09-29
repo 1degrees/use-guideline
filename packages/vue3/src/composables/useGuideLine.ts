@@ -1,14 +1,14 @@
 import { ref } from 'vue'
 import { Engine } from '@use-guideline/core'
-import type { IOffset } from '@use-guideline/core'
+import type { IOffset, IConfig } from '@use-guideline/core'
 
-export function useGuideline(){
+export function useGuideline(config?: IConfig){
   const line = ref<IOffset>({})
   const adsorb = ref<IOffset>({})
-  const engine = new Engine()
+  const engine = new Engine(config)
 
-  const dragMove = (el: Element) => {
-    engine.init(el)
+  const dragMove = (el: Element, others?: Element[]) => {
+    engine.init(el, others)
     line.value = engine.getGuideLine()
     adsorb.value = engine.getAdsorb()
   }

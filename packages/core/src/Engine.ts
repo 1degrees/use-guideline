@@ -12,8 +12,8 @@ export class Engine {
     this.guideLine = new GuideLine(this.base)
   }
 
-  init(el: Element) {
-    this.base.initBase(el)
+  init(el: Element, others?: Element[]) {
+    this.base.initBase(el, others)
     this.guideLine.calcLine()
     this.adorb.calcAdsorb()
     this.adorb.doAdsorb()
