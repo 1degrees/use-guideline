@@ -49,17 +49,17 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1degrees/use-gesture-x.git",
+    "url": "git+https://github.com/1degrees/use-guideline-x.git",
     "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/pmndrs/use-gesture/issues"
+    "url": "https://github.com/1degrees/use-guideline/issues"
   },
   "author": "Paul Henschel",
   "contributors": [
     "David Bismut (https://github.com/dbismut)"
   ],
-  "homepage": "https://use-gesture-vue3.netlify.app/",
+  "homepage": "https://use-guideline-vue3.netlify.app/",
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",

@@ -15,6 +15,13 @@ export interface IDragData {
   height?: number,
 }
 
+export interface IRange {
+  top?: number,
+  left?: number,
+  bottom?:number,
+  right?: number,
+}
+
 export interface IOffset {
   x?: number,
   y?: number,

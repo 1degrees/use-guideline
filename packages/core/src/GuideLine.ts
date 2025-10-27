@@ -16,8 +16,10 @@ export default class GuideLine {
     const xLines = this.findLines(this.base.selfX, this.base.othersX)
     const yLines = this.findLines(this.base.selfY, this.base.othersY)
     const line = {
-      x: xLines.length ? Math.min(...xLines) : undefined,
-      y: yLines.length ? Math.min(...yLines) : undefined
+      left: xLines.length ? Math.min(...xLines) : undefined,
+      right: xLines.length ? Math.max(...xLines) : undefined,
+      top: yLines.length ? Math.min(...yLines) : undefined,
+      bottom: yLines.length ? Math.max(...yLines) : undefined
     }
     this.base.lines = line
   }

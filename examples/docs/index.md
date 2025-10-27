@@ -1,10 +1,10 @@
-# vue3 手势插件
+# vue3 辅助线插件
 
-@use-guideline/vue3 一个非常易用且功能强大的 vue3 手势库。
+@use-guideline/vue3 一个非常易用的辅助线对齐插件。
 
-设计灵感借鉴于 @use-gesture, 基于vue3 Component API 重新设计并实现的手势工具集合
+设计灵感来源于日常开发过程中动态表单、低代码拖拽等场景中，需要对元素进行对齐操作的场景。积累而来
 
-保持了react 用户的使用习惯，开发者可以平滑无障碍切换至vue3 项目实战中使用
+使用了component API 设计方式易于使用，vue3 项目实战中使用
 
 ## 使用方式
 
@@ -22,11 +22,9 @@ pnpm install @use-guideline/vue3
 
 ### @use-guideline/vue3 component API 介绍
 
-useDrag 拖拽、useMove 移动、useHover 悬停、useWheel 滚轮、useScroll 滚动、
+useGuideline 辅助线对齐计算逻辑、GuideLine 辅助线组件
 
-usePinch 缩放、旋转、useGesture 自定义手势。
-
-下面由useDrag入手介绍简单使用
+下面由useGuideline、辅助线对齐计算逻辑、GuideLine 辅助线组件 入手介绍简单使用
 
 ### 实现效果
 

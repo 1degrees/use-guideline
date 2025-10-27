@@ -1,4 +1,4 @@
-import type { IConfig, IDragData, IOffset } from './type'
+import type { IConfig, IDragData, IRange, IOffset } from './type'
 export class Base {
   _el?: Element
   _others: Element[] = []
@@ -18,7 +18,7 @@ export class Base {
   _othersY: number[] = []
 
   // 辅助线初始数据
-  _lines: IOffset = {}
+  _lines: IRange = {}
 
   // 吸附初始数据
   _adsorbs: IOffset = {}
@@ -71,7 +71,7 @@ export class Base {
     return this._selfBound
   }
 
-  set lines(value: IOffset) {
+  set lines(value: IRange) {
     this._lines = value
   }
   get lines() {

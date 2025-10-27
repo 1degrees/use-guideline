@@ -7,8 +7,8 @@ export default class Adsorb {
   }
   // 吸附函数
   calcAdsorb() {
-    const {x, y } = this.base.lines
-    const offset: IOffset = { x: undefined,  y: undefined }
+    const {left: x, top: y } = this.base.lines
+    const offset: IOffset = { x: undefined, y: undefined }
     const { width = 0, height = 0 } = this.base.selfBound
     if (x) {
       const [l, c, r] = this.base.selfX

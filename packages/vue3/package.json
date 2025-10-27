@@ -1,7 +1,7 @@
 {
   "name": "@use-guideline/vue3",
   "version": "1.0.0",
-  "description": "vue3 target for @use-gesture",
+  "description": "vue3 target for @use-guideline",
   "keywords": [
     "@use-guideline/vue3",
     "vue",
@@ -37,13 +37,13 @@
     "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/pmndrs/use-guideline/issues"
+    "url": "https://github.com/1degrees/use-guideline/issues"
   },
   "author": "Paul Henschel",
   "contributors": [
     "David Bismut (https://github.com/dbismut)"
   ],
-  "homepage": "https://use-gesture-vue3.netlify.app/",
+  "homepage": "https://use-guideline-vue3.netlify.app/",
   "peerDependencies": {
     "vue": ">= 3.2.1"
   },

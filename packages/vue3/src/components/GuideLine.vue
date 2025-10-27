@@ -1,6 +1,8 @@
 <template>
-  <div class="guide-line guide-line-x" :style="guideLineX"></div>
-  <div class="guide-line guide-line-y" :style="guideLineY"></div>
+  <div class="guide-line guide-line-x guide-line-left" :style="guideLineLeft"></div>
+  <div class="guide-line guide-line-x guide-line-right" :style="guideLineRight"></div>
+  <div class="guide-line guide-line-y guide-line-top" :style="guideLineTop"></div>
+  <div class="guide-line guide-line-y guide-line-bottom" :style="guideLineBottom"></div>
 </template>
 <script lang="ts" setup>
 import { computed, defineProps } from 'vue'
@@ -12,15 +14,27 @@ const props = defineProps({
   }
 })
 
-const guideLineX = computed(() => {
+const guideLineLeft = computed(() => {
   return {
-    left: props.line?.x ? props.line?.x + 'px' : '',
+    left: props.line?.left ? props.line?.left + 'px' : '',
   }
 })
 
-const guideLineY = computed(() => {
+const guideLineRight = computed(() => {
   return {
-    top: props.line?.y ? props.line?.y + 'px' : '',
+    left: props.line?.right ? props.line?.right + 'px' : '',
+  }
+})
+
+const guideLineTop = computed(() => {
+  return {
+    top: props.line?.top ? props.line?.top + 'px' : '',
+  }
+})
+
+const guideLineBottom = computed(() => {
+  return {
+    top: props.line?.bottom ? props.line?.bottom + 'px' : '',
   }
 })
 </script>
